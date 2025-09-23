@@ -10,13 +10,38 @@
   padding: 1rem;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 .card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: scale(1.04) translateY(-4px);
 }
 .card img {
   max-width: 100%;
   border-radius: 6px;
   margin-bottom: 1rem;
+  transition: filter 0.3s;
+}
+.card:hover img {
+  filter: brightness(0.95) blur(1px);
+}
+.card h2 {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  color: #6c4f3d;
+}
+.card p {
+  margin: 0.3rem 0;
+}
+.search-bar {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.search-bar input, .search-bar select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }

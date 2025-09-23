@@ -4,12 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Local Coffee Shops Guide</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picocss@1.5.10/dist/pico.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <main class="container">
     <h1>Local Coffee Shops Guide</h1>
+    <form class="search-bar" id="searchForm">
+      <input type="text" id="searchInput" placeholder="Search by specialty...">
+      <select id="priceFilter">
+        <option value="">All Prices</option>
+        <option value="$">$</option>
+        <option value="$$">$$</option>
+        <option value="$$$">$$$</option>
+      </select>
+      <button type="submit">Filter</button>
+    </form>
     <div id="shop-list" class="grid"></div>
   </main>
   <script src="/script.js"></script>

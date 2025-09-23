@@ -5,7 +5,11 @@
     "specialty": "Cold Brew",
     "priceRange": "$",
     "hours": "7am - 6pm",
-    "image": "https://via.placeholder.com/400x300?text=Brewed+Awakening"
+    "image": "https://via.placeholder.com/400x300?text=Brewed+Awakening",
+    "reviews": [
+      { "author": "Alex", "text": "Great cold brew and friendly staff!" },
+      { "author": "Sam", "text": "Cozy atmosphere, perfect for studying." }
+    ]
   },
   {
     "name": "Bean There Done That",
@@ -13,7 +17,11 @@
     "specialty": "Espresso",
     "priceRange": "$$",
     "hours": "8am - 8pm",
-    "image": "https://via.placeholder.com/400x300?text=Bean+There+Done+That"
+    "image": "https://via.placeholder.com/400x300?text=Bean+There+Done+That",
+    "reviews": [
+      { "author": "Jamie", "text": "Espresso is top notch!" },
+      { "author": "Taylor", "text": "Love the vibe and music selection." }
+    ]
   },
   {
     "name": "Java Junction",
@@ -21,7 +29,11 @@
     "specialty": "Latte",
     "priceRange": "$$",
     "hours": "6am - 5pm",
-    "image": "https://via.placeholder.com/400x300?text=Java+Junction"
+    "image": "https://via.placeholder.com/400x300?text=Java+Junction",
+    "reviews": [
+      { "author": "Morgan", "text": "Best latte in town!" },
+      { "author": "Riley", "text": "Nice outdoor seating." }
+    ]
   },
   {
     "name": "Caffeine Fix",
@@ -29,7 +41,11 @@
     "specialty": "Cappuccino",
     "priceRange": "$$$",
     "hours": "7am - 7pm",
-    "image": "https://via.placeholder.com/400x300?text=Caffeine+Fix"
+    "image": "https://via.placeholder.com/400x300?text=Caffeine+Fix",
+    "reviews": [
+      { "author": "Jordan", "text": "Cappuccino is rich and creamy." },
+      { "author": "Casey", "text": "A bit pricey but worth it!" }
+    ]
   },
   {
     "name": "Perk Up Cafe",
@@ -37,6 +53,10 @@
     "specialty": "Mocha",
     "priceRange": "$",
     "hours": "8am - 4pm",
-    "image": "https://via.placeholder.com/400x300?text=Perk+Up+Cafe"
+    "image": "https://via.placeholder.com/400x300?text=Perk+Up+Cafe",
+    "reviews": [
+      { "author": "Drew", "text": "Mocha is delicious and not too sweet." },
+      { "author": "Pat", "text": "Staff is super welcoming." }
+    ]
   }
 ]

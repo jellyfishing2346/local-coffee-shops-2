@@ -18,10 +18,19 @@ app.get('/coffeeshops', (req, res) => {
 
 // Detail view
 app.get('/coffeeshops/:shopname', (req, res) => {
-  const shop = shops.find(s => encodeURIComponent(s.name) === req.params.shopname);
+  const shopName = decodeURIComponent(req.params.shopname);
+  const shop = shops.find(s => s.name === shopName);
   if (!shop) {
     return res.status(404).sendFile(path.join(__dirname, 'public/404.html'));
   }
+  const reviewsHtml = shop.reviews && shop.reviews.length ? `
+    <section>
+      <h2>Reviews</h2>
+      <ul>
+        ${shop.reviews.map(r => `<li><strong>${r.author}:</strong> ${r.text}</li>`).join('')}
+      </ul>
+    </section>
+  ` : '';
   res.send(`
     <!DOCTYPE html>
     <html lang="en">
@@ -29,7 +38,7 @@ app.get('/coffeeshops/:shopname', (req, res) => {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>${shop.name} - Local Coffee Shops Guide</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picocss@1.5.10/dist/pico.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css">
       <link rel="stylesheet" href="/style.css">
     </head>
     <body>
@@ -42,6 +51,7 @@ app.get('/coffeeshops/:shopname', (req, res) => {
           <p><strong>Specialty:</strong> ${shop.specialty}</p>
           <p><strong>Price Range:</strong> ${shop.priceRange}</p>
           <p><strong>Hours:</strong> ${shop.hours}</p>
+          ${reviewsHtml}
         </div>
       </main>
     </body>
