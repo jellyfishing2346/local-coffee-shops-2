@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Brewed Awakening",
+    "address": "123 Main St",
+    "specialty": "Cold Brew",
+    "priceRange": "$",
+    "hours": "7am - 6pm",
+    "image": "https://via.placeholder.com/400x300?text=Brewed+Awakening"
+  },
+  {
+    "name": "Bean There Done That",
+    "address": "456 Elm St",
+    "specialty": "Espresso",
+    "priceRange": "$$",
+    "hours": "8am - 8pm",
+    "image": "https://via.placeholder.com/400x300?text=Bean+There+Done+That"
+  },
+  {
+    "name": "Java Junction",
+    "address": "789 Oak Ave",
+    "specialty": "Latte",
+    "priceRange": "$$",
+    "hours": "6am - 5pm",
+    "image": "https://via.placeholder.com/400x300?text=Java+Junction"
+  },
+  {
+    "name": "Caffeine Fix",
+    "address": "321 Maple Rd",
+    "specialty": "Cappuccino",
+    "priceRange": "$$$",
+    "hours": "7am - 7pm",
+    "image": "https://via.placeholder.com/400x300?text=Caffeine+Fix"
+  },
+  {
+    "name": "Perk Up Cafe",
+    "address": "654 Pine St",
+    "specialty": "Mocha",
+    "priceRange": "$",
+    "hours": "8am - 4pm",
+    "image": "https://via.placeholder.com/400x300?text=Perk+Up+Cafe"
+  }
+]
