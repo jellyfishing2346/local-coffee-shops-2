@@ -1,0 +1,16 @@
+{
+  "name": "local-coffee-shops",
+  "version": "1.0.0",
+  "description": "Discover the best local coffee shops in the United States!   Browse, click, and explore each shop’s specialties, hours, and more.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
