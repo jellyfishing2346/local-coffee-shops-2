@@ -95,9 +95,11 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
   const price = document.getElementById('priceFilter').value; // Get the selected price range
   const sortBy = document.getElementById('sortSelect').value; // Get the selected sort option
   let filtered = shopsData.filter(shop => {
-    const specialtyMatch = shop.specialty.toLowerCase().includes(search); // Check if specialty matches the search
-    const priceMatch = price ? shop.priceRange === price : true; // Check if price range matches
-    return specialtyMatch && priceMatch; // Return true if both match
+    // Case-insensitive, partial match for name or specialty
+    const nameMatch = shop.name.toLowerCase().includes(search);
+    const specialtyMatch = shop.specialty.toLowerCase().includes(search);
+    const priceMatch = price ? shop.priceRange === price : true;
+    return (nameMatch || specialtyMatch) && priceMatch;
   });
   filtered = sortShops(filtered, sortBy); // Sort the filtered shops
   renderShops(filtered); // Render the filtered and sorted shops
