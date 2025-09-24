@@ -21,7 +21,15 @@ Browse, click, and explore each shop’s specialties, hours, and more.
 
 ## 🖥️ Demo
 
-![Demo GIF](demo.gif)
+![WEB103 Project 1 Submission](WEB103%20Project%201%20Submission.gif)
+*Animated walkthrough of the full Local Coffee Shops Guide experience.*
+
+---
+
+## 📸 Screenshot
+
+![Local Coffee Shops Guide Screenshot](Local-Coffee-Shops-Guide.png)
+*A beautiful, responsive view of the app in action.*
 
 ---
 
@@ -64,9 +72,10 @@ Each coffee shop has:
 
 ---
 
-## 📸 Attribution
+## 📊 Attribution
 
-Banner image from [Unsplash](https://unsplash.com/photos/coffee-shop).
+![Project Layout Diagram](project-layout-diagram.png)
+*A clean diagram showing the structure and flow of the Local Coffee Shops Guide project.*
 
 ---
 
