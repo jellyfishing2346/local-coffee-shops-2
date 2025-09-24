@@ -16,6 +16,8 @@ app.get('/coffeeshops', (req, res) => {
   res.json(shops);
 });
 
+let submittedReviews = {};
+
 // Detail view
 app.get('/coffeeshops/:shopname', (req, res) => {
   const shopName = decodeURIComponent(req.params.shopname);
@@ -23,11 +25,13 @@ app.get('/coffeeshops/:shopname', (req, res) => {
   if (!shop) {
     return res.status(404).sendFile(path.join(__dirname, 'public/404.html'));
   }
-  const reviewsHtml = shop.reviews && shop.reviews.length ? `
+  // Merge static and submitted reviews
+  const allReviews = [...(shop.reviews || []), ...(submittedReviews[shopName] || [])];
+  const reviewsHtml = allReviews.length ? `
     <section>
       <h2>Reviews</h2>
       <ul>
-        ${shop.reviews.map(r => `<li><strong>${r.author}:</strong> ${r.text}</li>`).join('')}
+        ${allReviews.map(r => `<li><strong>${r.author}:</strong> ${r.text}</li>`).join('')}
       </ul>
     </section>
   ` : '';
@@ -52,11 +56,27 @@ app.get('/coffeeshops/:shopname', (req, res) => {
           <p><strong>Price Range:</strong> ${shop.priceRange}</p>
           <p><strong>Hours:</strong> ${shop.hours}</p>
           ${reviewsHtml}
+          <section>
+            <h2>Submit a Review</h2>
+            <form method="POST" action="/coffeeshops/${encodeURIComponent(shop.name)}/review">
+              <input type="text" name="author" placeholder="Your name" required>
+              <textarea name="text" placeholder="Your review" required></textarea>
+              <button type="submit">Submit Review</button>
+            </form>
+          </section>
         </div>
       </main>
     </body>
     </html>
   `);
+});
+
+app.use(express.urlencoded({ extended: true }));
+app.post('/coffeeshops/:shopname/review', (req, res) => {
+  const shopName = decodeURIComponent(req.params.shopname);
+  if (!submittedReviews[shopName]) submittedReviews[shopName] = [];
+  submittedReviews[shopName].push({ author: req.body.author, text: req.body.text });
+  res.redirect(`/coffeeshops/${encodeURIComponent(shopName)}`);
 });
 
 // 404 handler

@@ -6,22 +6,39 @@
   <title>Local Coffee Shops Guide</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
   <main class="container">
     <h1>Local Coffee Shops Guide</h1>
-    <form class="search-bar" id="searchForm">
-      <input type="text" id="searchInput" placeholder="Search by specialty...">
-      <select id="priceFilter">
+    <form class="search-bar" id="searchForm" aria-label="Search and filter coffee shops">
+      <input type="text" id="searchInput" placeholder="Search by specialty..." aria-label="Search by specialty">
+      <select id="priceFilter" aria-label="Filter by price">
         <option value="">All Prices</option>
         <option value="$">$</option>
         <option value="$$">$$</option>
         <option value="$$$">$$$</option>
       </select>
+      <select id="sortSelect" aria-label="Sort by">
+        <option value="">Sort By</option>
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+        <option value="specialty">Specialty</option>
+      </select>
       <button type="submit">Filter</button>
     </form>
     <div id="shop-list" class="grid"></div>
+    <div id="error-message" style="display:none; color:#c00; text-align:center; margin:2rem 0;"></div>
+    <nav id="pagination" aria-label="Pagination" style="margin:2rem 0; text-align:center;"></nav>
+    <section>
+      <h2>Map of Coffee Shops</h2>
+      <div id="map" style="height: 350px; margin-bottom: 2rem;"></div>
+    </section>
   </main>
+  <footer>
+    &copy; 2025 Local Coffee Shops Guide &mdash; Made with ☕ | Contact: info@localcoffeeshops.com
+  </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="/script.js"></script>
 </body>
 </html>

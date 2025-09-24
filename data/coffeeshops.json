@@ -5,7 +5,9 @@
     "specialty": "Cold Brew",
     "priceRange": "$",
     "hours": "7am - 6pm",
-    "image": "https://via.placeholder.com/400x300?text=Brewed+Awakening",
+    "image": "https://picsum.photos/seed/brewed/400/300",
+    "lat": 40.7128,
+    "lng": -74.0060,
     "reviews": [
       { "author": "Alex", "text": "Great cold brew and friendly staff!" },
       { "author": "Sam", "text": "Cozy atmosphere, perfect for studying." }
@@ -17,7 +19,9 @@
     "specialty": "Espresso",
     "priceRange": "$$",
     "hours": "8am - 8pm",
-    "image": "https://via.placeholder.com/400x300?text=Bean+There+Done+That",
+    "image": "https://picsum.photos/seed/bean/400/300",
+    "lat": 34.0522,
+    "lng": -118.2437,
     "reviews": [
       { "author": "Jamie", "text": "Espresso is top notch!" },
       { "author": "Taylor", "text": "Love the vibe and music selection." }
@@ -29,7 +33,9 @@
     "specialty": "Latte",
     "priceRange": "$$",
     "hours": "6am - 5pm",
-    "image": "https://via.placeholder.com/400x300?text=Java+Junction",
+    "image": "https://picsum.photos/seed/java/400/300",
+    "lat": 41.8781,
+    "lng": -87.6298,
     "reviews": [
       { "author": "Morgan", "text": "Best latte in town!" },
       { "author": "Riley", "text": "Nice outdoor seating." }
@@ -41,7 +47,9 @@
     "specialty": "Cappuccino",
     "priceRange": "$$$",
     "hours": "7am - 7pm",
-    "image": "https://via.placeholder.com/400x300?text=Caffeine+Fix",
+    "image": "https://picsum.photos/seed/caffeine/400/300",
+    "lat": 29.7604,
+    "lng": -95.3698,
     "reviews": [
       { "author": "Jordan", "text": "Cappuccino is rich and creamy." },
       { "author": "Casey", "text": "A bit pricey but worth it!" }
@@ -53,7 +61,9 @@
     "specialty": "Mocha",
     "priceRange": "$",
     "hours": "8am - 4pm",
-    "image": "https://via.placeholder.com/400x300?text=Perk+Up+Cafe",
+    "image": "https://picsum.photos/seed/perkup/400/300",
+    "lat": 47.6062,
+    "lng": -122.3321,
     "reviews": [
       { "author": "Drew", "text": "Mocha is delicious and not too sweet." },
       { "author": "Pat", "text": "Staff is super welcoming." }
