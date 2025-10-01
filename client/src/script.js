@@ -80,11 +80,19 @@ function renderMap(shops) {
 }
 
 // Fetch coffee shop data from the server
-fetch('/coffeeshops')
+fetch('/api/coffeeshops')
   .then(res => res.json())
   .then(data => {
     shopsData = data; // Store the data in the shopsData variable
     renderShops(shopsData); // Render the shops on the page
+  })
+  .catch(error => {
+    console.error('Error loading coffee shops:', error);
+    const errorMsg = document.getElementById('error-message');
+    if (errorMsg) {
+      errorMsg.style.display = 'block';
+      errorMsg.textContent = 'Failed to load coffee shops. Please try again later.';
+    }
   });
 
 // Event listener for the search form submission

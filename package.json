@@ -1,16 +1,20 @@
 {
-  "name": "local-coffee-shops",
-  "version": "1.0.0",
-  "description": "Discover the best local coffee shops in the United States!   Browse, click, and explore each shop’s specialties, hours, and more.",
-  "main": "server.js",
+  "name": "local-coffee-shops-2",
+  "version": "2.0.0",
+  "description": "Discover the best local coffee shops in the United States! Browse, click, and explore each shop's specialties, hours, and more. Now with PostgreSQL database backend!",
+  "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server/server.js",
+    "setup-db": "node server/config/setup-database.js",
+    "dev": "node server/server.js"
   },
-  "keywords": [],
+  "keywords": ["coffee", "local", "shops", "postgresql", "express"],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
   }
 }
