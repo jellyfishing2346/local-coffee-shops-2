@@ -1,0 +1,10 @@
+# Render.com deployment configuration
+services:
+  - type: web
+    name: local-coffee-shops-2
+    env: node
+    buildCommand: npm install && npm run setup-db
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production

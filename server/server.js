@@ -120,6 +120,25 @@ app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, '../client/src/404.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// Initialize database and start server
+async function startServer() {
+  try {
+    // Only set up database if DATABASE_URL is available
+    if (process.env.DATABASE_URL) {
+      console.log('Setting up database...');
+      const setupDatabase = require('./config/setup-database');
+      await setupDatabase();
+    } else {
+      console.log('No DATABASE_URL found, skipping database setup');
+    }
+  } catch (error) {
+    console.error('Database setup failed:', error.message);
+    console.log('Server will start anyway, database setup will be retried on first request');
+  }
+  
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+startServer();
