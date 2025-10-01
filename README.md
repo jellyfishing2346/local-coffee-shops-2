@@ -11,7 +11,7 @@ Browse, click, and explore each shop's specialties, hours, and more.
 **Deployed Application**: [https://local-coffee-shops-2.onrender.com/](https://local-coffee-shops-2.onrender.com/)
 
 ## 📹 Project Demo
-![WEB103 Project 2 Submission](WEB103%20Project%202%20Submission.gif)
+![WEB103 Project 2 Submission](WEB%20103%20Project%202%20Submission.gif)
 
 ## 🎯 Project Requirements Met
 
