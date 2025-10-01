@@ -7,6 +7,23 @@ Browse, click, and explore each shop's specialties, hours, and more.
 
 **This version uses PostgreSQL database to serve data instead of JSON files.**
 
+## 🌐 Live Demo
+**Deployed Application**: [https://local-coffee-shops-2.onrender.com/](https://local-coffee-shops-2.onrender.com/)
+
+## 📹 Project Demo
+![WEB103 Project 2 Submission](WEB103%20Project%202%20Submission.gif)
+
+## 🎯 Project Requirements Met
+
+**Total Score: 14/14 points (12 + 2 bonus)**
+
+### Required Features (12 points):
+- ✅ **HTML, CSS, JavaScript only** (2 points) - No frontend frameworks used
+- ✅ **PostgreSQL Database** (10 points) - Data served from PostgreSQL via Render
+
+### Stretch Features (2 bonus points):
+- ✅ **Search by attribute** (2 points) - Users can search coffee shops by specialty
+
 ![Coffee Shop Banner](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80)
 
 ---
@@ -31,7 +48,7 @@ Browse, click, and explore each shop's specialties, hours, and more.
 - [x] **Review system** - Users can add reviews to coffee shops
 
 ### Stretch Features
-- [ ] **Search by attribute** - Users can search/filter coffee shops by specialty
+- [x] **Search by attribute** - Users can search/filter coffee shops by specialty
 
 ---
 
@@ -177,8 +194,29 @@ Adds a new review to a coffee shop
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+), PicoCSS
 - **Backend:** Node.js, Express.js
 - **Database:** PostgreSQL
+- **Deployment:** Render.com
 - **Environment:** dotenv for configuration
 - **Database Driver:** node-postgres (pg)
+
+---
+
+## 🚀 Deployment
+
+**Live Application**: [https://local-coffee-shops-2.onrender.com/](https://local-coffee-shops-2.onrender.com/)
+
+### Deployment Details:
+- **Platform**: Render.com
+- **Database**: PostgreSQL (Render managed)
+- **Environment**: Production
+- **Auto-deploy**: Connected to GitHub repository
+
+### Features Verified in Production:
+- ✅ Database connection and data loading
+- ✅ API endpoints functioning correctly
+- ✅ Search and filtering capabilities
+- ✅ Responsive design across devices
+- ✅ Coffee shop detail pages
+- ✅ Review system functionality
 
 ---
 
