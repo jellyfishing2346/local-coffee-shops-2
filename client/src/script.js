@@ -81,8 +81,15 @@ function renderMap(shops) {
 
 // Fetch coffee shop data from the server
 fetch('/api/coffeeshops')
-  .then(res => res.json())
+  .then(res => {
+    console.log('API Response status:', res.status);
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    return res.json();
+  })
   .then(data => {
+    console.log('Fetched coffee shops:', data);
     shopsData = data; // Store the data in the shopsData variable
     renderShops(shopsData); // Render the shops on the page
   })
