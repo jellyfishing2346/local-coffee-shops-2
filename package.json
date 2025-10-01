@@ -5,9 +5,8 @@
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run setup-db-safe && node server/server.js",
+    "start": "node server/server.js",
     "setup-db": "node server/config/setup-database.js",
-    "setup-db-safe": "node server/config/setup-database.js || echo 'Database setup will retry on start'",
     "dev": "node server/server.js",
     "build": "echo 'Build complete'"
   },
