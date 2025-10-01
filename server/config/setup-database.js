@@ -96,8 +96,8 @@ async function setupDatabase() {
   } catch (error) {
     console.error('Error setting up database:', error);
   } finally {
-    // Close the database connection
-    await db.pool.end();
+    // Don't close the database connection pool - keep it open for API requests
+    console.log('Database setup complete, connection pool remains open for API requests');
   }
 }
 
