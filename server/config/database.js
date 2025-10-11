@@ -9,7 +9,9 @@ const pool = new Pool({
   database: process.env.DB_NAME || 'local_coffee_shops',
   user: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASSWORD || '',
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  ssl: {
+    rejectUnauthorized: false
+  },
 });
 
 // Test database connection
