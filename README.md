@@ -116,7 +116,7 @@ CREATE TABLE reviews (
 
 ## 🗄️ PostgreSQL Database Screenshots
 
-These screenshots show the actual `coffee_shops` and `reviews` tables and data in the deployed PostgreSQL database:
+*The following screenshots show the `coffee_shops` and `reviews` tables and data as they existed on October 1st, 2025 in the deployed PostgreSQL database:*
 
 ![Coffee Shops Table](coffee-database-table.png)
 ![Reviews Table](reviews-database-table.png)
